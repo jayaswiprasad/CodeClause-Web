@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-image: url(bahubali\ hill.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.875rem;
+}
+
+.menuToggle{
+    display: none;
+}
+
+header{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    font-size: 1.5rem;
+}
+
+/* .logo span{
+    color: red;
+} */
+p{
+    padding: 10px;
+}
+.navigation{
+    list-style: none;
+    display: flex;
+}
+
+.navigation li{
+    margin-left: 1.2rem;
+    font-size: 1.1rem;
+    padding: 0.4rem;
+}
+
+.navigation li{
+    /* border-bottom: 2px solid brown; */
+}
+
+.navigation li a:hover{
+    border-bottom: 2px solid brown;
+}
+
+/* main & post */
+
+.main .col{
+    width: 45%;
+}
+
+.post img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.user-info img{
+    width: 170px;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.user-info span{
+    margin-left: 0.5rem;
+    color: gray;
+    font-size: 1.5rem;
+    
+}
+
+
+.post p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    opacity: 0.6;
+    text-align: justify;
+    color: black;
+}
+
+.post{
+    background-color: white;
+    box-shadow: rgba(16, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    margin-top: 3rem;
+}
+.row .col{
+    float: left;
+    padding-left: 60px;
+}
+.row2 .col{
+    float: left;
+    padding: 30px;
+    margin-left:30px;
+
+}
+/* footer{
+    margin-top: 3rem;
+    background-color: red;
+    box-shadow: 0px 0 5px rgba(0, 0, 0, 0.01);
+} */
+/* .container .footer{
+    text-align: center;
+    padding: 1rem 0.875rem;
+} */
+@media(max-width: 800px){
+    .header .navigation{
+        display: none;
+    }
+    .header .menuToggle{
+        display: flex;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    .container .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .header.navigation.active{
+        display: flex;
+        position: fixed;
+        top: 4rem;
+        background-color: blue;
+        width: 100%;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.25rem;
+        animation: slide 0.2s ease;
+    }
+    @keyframes slide{
+        0% {
+            left: -300px;
+        }
+        100% {
+            left: 0;
+        }
+    }
+    .header.navigation li{
+        margin-left: 0rem;
+    }
+}
